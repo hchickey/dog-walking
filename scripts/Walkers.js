@@ -1,5 +1,6 @@
+import { filterWalkerCities } from "./Assignments.js"
 import { getWalkers } from "./database.js"
-import { getWalkerCities } from "./database.js"
+
 
 document.addEventListener(
     "click",
@@ -10,7 +11,7 @@ document.addEventListener(
 
             for (const walker of walkers) {
                 if (walker.id === parseInt(walkerId)) {
-                    window.alert(`${walker.name} services ${walker.city}`)
+                window.alert(`${walker.name} services ${filterWalkerCities(walker)}`)
                 }
             }
         }
